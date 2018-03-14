@@ -4,18 +4,5 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="cs.tgate">
 
-  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
-      directory="overrides"
-      layer="cs.tgate.interfaces.ICsTgateLayer"
-      />
-
-  <!-- Publish static files -->
-  <plone:static
-      name="cs.tgate"
-      type="plone"
-      directory="static"
-      />
 
 </configure>
