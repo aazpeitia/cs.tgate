@@ -4,5 +4,13 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="cs.tgate">
 
+  <browser:page
+    name="tgate-controlpanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.TgateControlPanelView"
+    permission="cmf.ManagePortal"
+    />
+
+
 
 </configure>
