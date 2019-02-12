@@ -11,6 +11,15 @@
     permission="cmf.ManagePortal"
     />
 
+  <browser:page
+    name="tgate-translation"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".translation.RequestTGateTranslation"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.ICsTgateLayer"
+    menu="plone_contentmenu_actions"
+    title="Request translation"
+  />
 
 
 </configure>

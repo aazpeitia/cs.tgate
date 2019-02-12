@@ -42,6 +42,7 @@ setup(
         'plone.api',
         'Products.GenericSetup>=1.8.2',
         'setuptools',
+        'tgateclient',
         'z3c.jbot',
     ],
     extras_require={
