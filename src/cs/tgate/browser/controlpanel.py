@@ -8,8 +8,7 @@ from plone.z3cform import layout
 class TgateControlPanelForm(RegistryEditForm):
     schema = ITgateControlPanel
     schema_prefix = "tgate"
-    label = u'TGATE translation service settings'
+    label = u"TGATE translation service settings"
 
 
-TgateControlPanelView = layout.wrap_form(
-    TgateControlPanelForm, ControlPanelFormWrapper)
+TgateControlPanelView = layout.wrap_form(TgateControlPanelForm, ControlPanelFormWrapper)

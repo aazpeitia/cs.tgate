@@ -21,29 +21,23 @@ class CsTgateLayer(PloneSandboxLayer):
         self.loadZCML(package=cs.tgate)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'cs.tgate:default')
+        applyProfile(portal, "cs.tgate:default")
 
 
 CS_TGATE_FIXTURE = CsTgateLayer()
 
 
 CS_TGATE_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(CS_TGATE_FIXTURE,),
-    name='CsTgateLayer:IntegrationTesting'
+    bases=(CS_TGATE_FIXTURE,), name="CsTgateLayer:IntegrationTesting"
 )
 
 
 CS_TGATE_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(CS_TGATE_FIXTURE,),
-    name='CsTgateLayer:FunctionalTesting'
+    bases=(CS_TGATE_FIXTURE,), name="CsTgateLayer:FunctionalTesting"
 )
 
 
 CS_TGATE_ACCEPTANCE_TESTING = FunctionalTesting(
-    bases=(
-        CS_TGATE_FIXTURE,
-        REMOTE_LIBRARY_BUNDLE_FIXTURE,
-        z2.ZSERVER_FIXTURE
-    ),
-    name='CsTgateLayer:AcceptanceTesting'
+    bases=(CS_TGATE_FIXTURE, REMOTE_LIBRARY_BUNDLE_FIXTURE, z2.ZSERVER_FIXTURE),
+    name="CsTgateLayer:AcceptanceTesting",
 )

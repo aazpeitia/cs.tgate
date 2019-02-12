@@ -13,20 +13,15 @@ class ICsTgateLayer(IDefaultBrowserLayer):
 
 class ITgateControlPanel(Interface):
     tgate_server_url = schema.TextLine(
-        title=_(u'Enter the URL of the TGATE server'),
-        required=True,
-        default=u''
+        title=_(u"Enter the URL of the TGATE server"), required=True, default=u""
     )
 
     tgate_server_username = schema.TextLine(
-        title=_(u'Enter the user to use the TGATE server'),
-        required=True,
-        default=u''
+        title=_(u"Enter the user to use the TGATE server"), required=True, default=u""
     )
 
     tgate_server_password = schema.TextLine(
-        title=_(u'Enter the password to use the TGATE server'),
+        title=_(u"Enter the password to use the TGATE server"),
         required=True,
-        default=u''
+        default=u"",
     )
-

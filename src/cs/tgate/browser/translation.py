@@ -3,7 +3,6 @@ from cs.tgate import _
 from plone.app.textfield.value import RichTextValue
 from plone.registry.interfaces import IRegistry
 from Products.CMFPlone.utils import safe_unicode
-from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 from tgateclient.client import TGateClient
 from z3c.form import button
@@ -88,7 +87,6 @@ class RequestTGateTranslation(form.Form):
         filepath = self._make_html_document_from_field(fieldname)
         result = self._translate(filepath, data.get("model"), data.get("tr_mode"))
 
-        # XXX: Hardcoded langauge
         translation = pam.translate(self.context, target_language="en")
         translation.title = self.context.title
         translation.description = self.context.description
